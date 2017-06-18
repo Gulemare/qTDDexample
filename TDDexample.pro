@@ -1,5 +1,8 @@
 #-------------------------------------------------
-# Simple console project with tests as subdir project
+# Just a common object-oriented qt console project which includes
+# classes you want to test
+#
+# All tests are defined in subproject tests
 #-------------------------------------------------
 
 QT += core

@@ -1,9 +1,6 @@
 #include "myclass.h"
 
-MyClass::MyClass()
-{
-
-}
+// Realisation of your class
 
 bool MyClass::compare(int first, int second)
 {

@@ -1,5 +1,7 @@
 #-------------------------------------------------
-# Project with tests for sources of project TDDexample
+# Subproject for unit-tests
+#
+# get testing classes by relative paths
 #-------------------------------------------------
 
 # Framework for testing
@@ -14,6 +16,7 @@ CONFIG   -= app_bundle
 
 TEMPLATE = app
 
+# Relative paths to sources
 HEADERS += \
     ../myclass.h
 
