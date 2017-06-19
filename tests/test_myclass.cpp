@@ -1,19 +1,16 @@
+// Class for testing class MyClass
 #include <QtTest>
 #include "../myclass.h"
 
-// Class for testing class MyClass
-class Test_MyClass : public QObject
-{
+class Test_MyClass : public QObject {
     Q_OBJECT
-
 private slots:
     void compare_data();    // Table input for compare tests
     void compare();         // Tests for compare function
     void abs();             // Tests for abs function
 };
 
-void Test_MyClass::compare_data()
-{
+void Test_MyClass::compare_data() {
     // Arguments and return val of compare function
     QTest::addColumn<int>("first");
     QTest::addColumn<int>("second");
@@ -26,9 +23,8 @@ void Test_MyClass::compare_data()
     QTest::newRow("compare_data_4") << 9999 << 9999 << true;
 }
 
-void Test_MyClass::compare()
-{
-    MyClass m;
+void Test_MyClass::compare() {
+    tddexample::MyClass m;
 
     // Fill table with values
     QFETCH(int, first);
@@ -39,9 +35,8 @@ void Test_MyClass::compare()
     QCOMPARE(m.compare(first, second), result);
 }
 
-void Test_MyClass::abs()
-{
-    MyClass m;
+void Test_MyClass::abs() {
+    tddexample::MyClass m;
 
     // Direct compare using constants
     QCOMPARE(m.abs(1),1);
